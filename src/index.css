@@ -1,13 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* Variáveis de cor*/
+  --primary: #2563EB; /* Azul */
+  --secondary: #CFFAFE; /* Azul claro */
+  --text: #334155; /* Cinza escuro */
+  --bg: #F8FAFC; /* Fundo claro */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Importe a fonte no index.html se quiser */
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Utilitários */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }

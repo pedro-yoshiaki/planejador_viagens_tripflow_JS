@@ -1,0 +1,66 @@
+/* Faz o header flutuar sobre o conteúdo */
+.header-transparent {
+    position: absolute; /* O segredo para ficar em cima da imagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que fique acima de tudo */
+    padding: 20px 0;
+    background-color: transparent; /* Fundo transparente */
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha tudo à esquerda, como na imagem */
+    gap: 40px; /* Espaço entre o logo e o menu */
+  }
+  
+  /* Estilo do Logo */
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff; /* Texto Branco */
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .logo-icon {
+    font-size: 1.8rem;
+  }
+  
+  /* Navegação */
+  .nav-menu {
+    display: flex;
+    gap: 15px; /* Espaço entre os itens do menu */
+  }
+  
+  .menu-item {
+    text-decoration: none;
+    color: #fff; /* Texto Branco padrão */
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 20px; /* Espaçamento interno para o botão */
+    border-radius: 50px; /* Borda arredondada (Pill shape) */
+    transition: all 0.3s ease;
+  }
+  
+  /* Efeito Hover (passar o mouse) */
+  .menu-item:hover {
+    color: var(--secondary);
+  }
+  
+  /* Estado Ativo (Página selecionada) */
+  .menu-item.active {
+    background-color: var(--secondary); 
+    color: #fff; /* Mantém o texto branco no ativo */
+    font-weight: 600;
+  }
+  
+  .menu-item.active:hover {
+      color: #fff; /* No ativo, o texto não muda de cor */
+      background-color: var(--secondary);
+  }
