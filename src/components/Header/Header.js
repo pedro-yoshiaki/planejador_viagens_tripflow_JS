@@ -46,7 +46,7 @@ function Header() {
             Home
           </Link>
           <Link to="/viagens" className={isActive('/viagens')} onClick={closeMobileMenu}>
-            Explorar
+            Viagens
           </Link>
           <Link to="/cronograma" className={isActive('/cronograma')} onClick={closeMobileMenu}>
             Cronograma

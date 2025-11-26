@@ -1,14 +1,14 @@
 :root {
   /* Variáveis de cor*/
-  --primary: #2563EB; /* Azul */
-  --secondary: #CFFAFE; /* Azul claro */
+  --primary: #60A5FA; /* Azul */
+  --secondary: #77d7e0; /* Azul claro */
   --text: #334155; /* Cinza escuro */
   --bg: #F8FAFC; /* Fundo claro */
 }
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif; /* Importe a fonte no index.html se quiser */
+  font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: var(--text);
 }

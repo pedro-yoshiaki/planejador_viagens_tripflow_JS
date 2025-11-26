@@ -1,0 +1,146 @@
+/* Remove margens padrões para ocupar tela toda */
+.home-container {
+    width: 100%;
+  }
+  
+  /* Configuração da Seção Hero */
+  .hero-section {
+    width: 100%;
+    height: 100vh; /* Ocupa 100% da altura da janela */
+    /* Imagem de fundo de alta qualidade */
+    background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  /* Camada escura (Overlay) */
+  .hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Preto com 40% de transparência */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 0 20px;
+  }
+  
+  /* Conteúdo de Texto */
+  .hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 800px; /* Limita a largura para não ficar muito espalhado */
+    margin-top: 60px; /* Compensa a altura do Header fixo */
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/ /* Sombra para leitura */
+  }
+  
+  .hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);*/
+  }
+  
+  /* Botão CTA (Call to Action) */
+  .hero-btn {
+    display: inline-block; /* 1. Garante que o Link aceite tamanho e padding */
+    text-decoration: none; /* 2. Remove o sublinhado padrão de links */
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .hero-btn:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05); /* Aumenta um pouquinho ao passar o mouse */
+  }
+  
+/* --- SEÇÃO 2: FEATURES --- */
+.features-section {
+    /* 1. Aumentei o padding-top de 80px para 120px para afastar do Hero */
+    padding: 80px 20px 80px; 
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Garante margem em telas menores */
+    text-align: center;
+  }
+  
+  .features-header h2 {
+    font-size: 2.5rem;
+    color: #1E293B;
+    margin-bottom: 15px;
+  }
+  
+  .features-header p {
+    color: #64748B;
+    margin-bottom: 60px; /* Mais espaço entre o subtítulo e os cards */
+  }
+  
+  /* Grid dos Cards */
+  .features-grid {
+    display: flex;          /* Ativa o modo Flexbox */
+    flex-direction: row;    /* Força a direção horizontal (lado a lado) */
+    flex-wrap: wrap;        /* Permite quebrar linha se a tela for menor */
+    justify-content: center; /* Centraliza o grupo de cards na tela */
+    gap: 30px;              /* Espaço entre os cards */
+    margin-bottom: 60px;
+  }
+  
+  /* Botão Secundário (Outline) */
+  .btn-outline {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 35px;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--secondary);
+    color: #fff;
+  }
+
+  /* Responsividade para Celulares */
+  @media screen and (max-width: 768px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+    
+    .hero-text {
+      font-size: 1rem;
+    }
+
+    .features-grid {
+        flex-direction: column; /* No celular, empilha um embaixo do outro */
+        align-items: center;    /* Centraliza a coluna */
+      }
+
+    .features-section {
+        padding-top: 60px; /* No celular pode ser menor o espaço */
+      }  
+  }
