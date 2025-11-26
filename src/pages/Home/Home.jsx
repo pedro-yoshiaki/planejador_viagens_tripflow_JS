@@ -21,7 +21,7 @@ function Home() {
             </p>
 
             <Link to="/viagens" className="hero-btn">
-              Começar Agora
+              Começar
             </Link>
           </div>
         </div>
