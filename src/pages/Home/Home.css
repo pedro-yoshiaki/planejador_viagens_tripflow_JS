@@ -87,6 +87,111 @@
     margin-bottom: 60px;
   }
 
+  /* =========================================
+   SEÇÃO 3: CARROSSEL (Destinos)
+   ========================================= */
+.carousel-section {
+  padding: 5px 0 80px;
+  background-color: #F8FAFC;
+  overflow: hidden; /* Evita rolagem horizontal indesejada na página */
+}
+
+/* Cabeçalho da Seção (Título + Setas) */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 20px; /* Alinhamento com as laterais */
+  max-width: 1240px; /* Limita a largura do cabeçalho também */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Botões de Navegação (Setas) */
+.nav-btn {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.1);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text);
+  margin-left: 10px;
+  transition: all 0.2s ease;
+  
+  /* Centraliza o ícone */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nav-btn:hover {
+  background-color: var(--secondary); /* Âmbar */
+  color: var(--white);
+  border-color: var(--secondary);
+  transform: scale(1.1);
+}
+
+/* O Container que rola (Scroll) */
+.carousel-container {
+  display: flex;
+  gap: 24px;
+  
+  /* Lógica de Scroll */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 20px 40px; /* Espaço extra embaixo para sombras */
+  
+  /* Centraliza e limita largura */
+  max-width: 1240px;
+  margin: 0 auto;
+  
+  /* Scroll Snap */
+  scroll-snap-type: x mandatory;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Esconder a barra de rolagem padrão (estética) */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Item do Carrossel (Wrapper) */
+.carousel-item {
+  /* O item não pode encolher nem crescer, tem tamanho fixo */
+  flex: 0 0 auto;
+  
+  /* Lógica: (100% / 4 cards) - (ajuste do gap) */
+  /* 24px de gap * 3 espaços = 72px total / 4 = 18px de desconto por card */
+  width: calc(25% - 18px);
+  
+  scroll-snap-align: start; /* Alinha à esquerda ao parar de rolar */
+}
+
+/* Botão centralizado embaixo do carrossel */
+.center-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsividade para Tablets */
+@media screen and (max-width: 1024px) {
+  /* Tablet: Mostra 3 cards */
+  .carousel-item {
+    width: calc(33.333% - 16px);
+  }
+}
   /* Responsividade para Celulares */
   @media screen and (max-width: 768px) {
     .hero-title {
@@ -104,5 +209,39 @@
 
     .features-section {
         padding-top: 60px; /* No celular pode ser menor o espaço */
-      }  
+      }
+      
+      /* Ajuste Carrossel */
+    .section-header {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .carousel-item {
+      width: calc(50% - 12px);
+    }
+    
+    /* No celular, as setas ficam embaixo do título */
+    .carousel-actions {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .nav-btn {
+      margin: 0; /* Remove margem lateral antiga */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    /* Mobile Pequeno: Mostra 1 card (aprox 85% da tela pra ver que tem mais) */
+    .carousel-item {
+      width: 85%;
+    }
+    
+    .carousel-actions {
+      display: none; /* Esconde setas no celular, usa o dedo */
+    }
   }
