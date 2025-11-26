@@ -1,0 +1,136 @@
+/* ESTILOS GERAIS (DESKTOP) */
+.header-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  background-color: transparent;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinhado à esquerda no Desktop */
+  gap: 40px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1001; /* Garante que o logo fique acima do menu aberto */
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+/* Ícone do Menu (Escondido no Desktop) */
+.menu-icon {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  color: var(--secondary);
+}
+
+.menu-item.active {
+  background-color: var(--secondary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.menu-item.active:hover {
+  background-color: var(--secondary);
+}
+
+/* --- MEDIA QUERY (TELA MENOR QUE 960px - MOBILE/TABLET) --- */
+@media screen and (max-width: 960px) {
+  
+  .header-content {
+    /* No mobile, queremos Logo na esquerda e Menu na direita */
+    justify-content: space-between; 
+    position: relative; /* Para conter o menu absoluto */
+  }
+
+  .menu-icon {
+    display: block; /* Mostra o ícone */
+    position: absolute;
+    top: 0;
+    right: 20px;
+    transform: translate(-100%, 60%); /* Ajuste fino de posição */
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1001; /* Fica acima do menu */
+  }
+
+  /* O Menu vira um painel lateral ou overlay */
+  .nav-menu {
+    display: flex;
+    flex-direction: column; /* Pilha vertical */
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura */
+    position: absolute;
+    top: 0;
+    left: -100%; /* Esconde o menu jogando ele para fora da tela à esquerda */
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #1E293B; /* Fundo escuro sólido (igual footer) para leitura */
+    padding-top: 100px; /* Espaço para não ficar em cima do logo */
+    align-items: center; /* Centraliza os links */
+    gap: 30px;
+  }
+
+  /* Quando o state 'click' for true, adicionamos essa classe */
+  .nav-menu.active {
+    left: 0; /* Traz o menu para a tela */
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 999;
+  }
+
+  .menu-item {
+    text-align: center;
+    padding: 1.5rem;
+    width: 80%;
+    display: table;
+    font-size: 1.2rem;
+  }
+
+  .menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efeito diferente no mobile */
+    color: var(--secondary);
+    border-radius: 8px;
+  }
+  
+  .menu-item.active {
+    /* No mobile, talvez não queira o botão laranja forte, apenas texto */
+    background-color: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+  }
+}
