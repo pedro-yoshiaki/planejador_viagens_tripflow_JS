@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css';
 import { Link } from 'react-router-dom';
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
+import Button from '../../components/Button/Button';
 
 function Home() {
   return (
@@ -20,9 +21,9 @@ function Home() {
               locais e acompanhe seus roteiros com facilidade.
             </p>
 
-            <Link to="/viagens" className="hero-btn">
+            <Button to="/viagens" variant="primary">
               Começar
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -58,9 +59,9 @@ function Home() {
           </div>
 
           <div className="features-action">
-            <Link to="/sobre" className="btn-outline">
-              Saiba Mais sobre Nós
-            </Link>
+            <Button to="/sobre" variant="outline">
+              Saiba mais sobre nós
+            </Button>
           </div>
         </div>
       </section>

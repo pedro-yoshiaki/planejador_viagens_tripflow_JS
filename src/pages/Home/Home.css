@@ -49,29 +49,9 @@
     /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);*/
   }
   
-  /* Botão CTA (Call to Action) */
-  .hero-btn {
-    display: inline-block; /* 1. Garante que o Link aceite tamanho e padding */
-    text-decoration: none; /* 2. Remove o sublinhado padrão de links */
-    padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--white);
-    background-color: var(--secondary);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-  }
-  
-  .hero-btn:hover {
-    background-color: var(--secondary-dark);
-    transform: scale(1.05); /* Aumenta um pouquinho ao passar o mouse */
-  }
-  
 /* --- SEÇÃO 2: FEATURES --- */
 .features-section {
-    padding: 80px 20px 80px; 
+    padding: 40px 20px 80px; 
     background-color: var(--bg);
     text-align: center;
     width: 100%;
@@ -105,25 +85,6 @@
     justify-content: center; /* Centraliza o grupo de cards na tela */
     gap: 30px;              /* Espaço entre os cards */
     margin-bottom: 60px;
-  }
-  
-  /* Botão Secundário (Outline) */
-  .btn-outline {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px 35px;
-    border: 2px solid var(--secondary);
-    color: var(--secondary);
-    font-weight: 600;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    background-color: var(--white);
-  }
-  
-  .btn-outline:hover {
-    background-color: var(--secondary);
-    color: var(--white);
   }
 
   /* Responsividade para Celulares */

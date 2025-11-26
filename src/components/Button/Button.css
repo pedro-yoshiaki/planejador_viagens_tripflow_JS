@@ -1,0 +1,43 @@
+/* Estilos Base */
+.btn {
+    display: inline-flex; /* Melhor que inline-block para alinhar ícones e texto */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+    font-family: 'Poppins', sans-serif; /* Garante a fonte */
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Variantes */
+  .btn--primary {
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+  
+  .btn--primary:hover {
+    background-color: var(--secondary-dark); 
+    transform: scale(1.05);
+    /*box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);*/
+  }
+  
+  .btn--outline {
+    background-color: transparent;
+    color: var(--secondary);
+    border-color: var(--secondary);
+  }
+  
+  .btn--outline:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+    transform: scale(1.05);
+  }
