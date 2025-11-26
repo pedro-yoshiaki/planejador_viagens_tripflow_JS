@@ -25,6 +25,7 @@
     font-size: 3rem;
     margin-bottom: 15px;
     display: block;
+    color: var(--secondary);
   }
   
   .feature-card h3 {

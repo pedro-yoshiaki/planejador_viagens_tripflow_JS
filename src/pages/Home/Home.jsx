@@ -1,8 +1,8 @@
 import React from "react";
 import './Home.css';
-import { Link } from 'react-router-dom';
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 import Button from '../../components/Button/Button';
+import { FaSuitcase, FaCalendarAlt, FaLock } from 'react-icons/fa';
 
 function Home() {
   return (
@@ -40,19 +40,19 @@ function Home() {
             {/* Agora usamos o componente 3 vezes, passando dados diferentes */}
             
             <FeatureCard 
-              icon="🧳"
+              icon={<FaSuitcase />}
               title="Planejamento de Viagens"
               text="Cadastre suas viagens com datas, fotos e informações essenciais. O sistema impede conflitos de calendário automaticamente."
             />
 
             <FeatureCard 
-              icon="📅"
+              icon={<FaCalendarAlt />}
               title="Cronograma por Dia"
               text="Adicione atividades com horário, local, valor e endereço. Tudo organizado automaticamente por data."
             />
 
             <FeatureCard 
-              icon="🔒"
+              icon={<FaLock />}
               title="Sem Conflitos"
               text="O sistema detecta automaticamente se uma atividade ou viagem entra em conflito com outras datas."
             />
