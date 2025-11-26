@@ -44,3 +44,8 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
+/* Reseta todos os elementos para contar o padding dentro da largura */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
