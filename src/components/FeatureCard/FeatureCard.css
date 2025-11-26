@@ -1,17 +1,24 @@
 /* Estilo do Card Individual */
 .feature-card {
-    background: #F8FAFC;
+    background: var(--white);
     padding: 30px;
     border-radius: 16px;
     width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(15, 118, 110, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center; /* Garante alinhamento interno */
+
+    /* Flexbox para alinhar conteúdo interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px rgba(15, 118, 110, 0.15);
+    border-color: var(--secondary);
   }
   
   .feature-icon {
@@ -21,20 +28,22 @@
   }
   
   .feature-card h3 {
-    color: #1E293B;
+    color: var(--primary);
     margin-bottom: 15px;
     font-size: 1.25rem;
   }
   
   .feature-card p {
-    color: #475569;
+    color: var(--text);
     line-height: 1.6;
     font-size: 0.95rem;
+    opacity: 0.85;
   }
   
   /* Ajuste Mobile */
   @media screen and (max-width: 768px) {
     .feature-card {
       width: 100%;
+      max-width: 350px;
     }
   }

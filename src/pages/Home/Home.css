@@ -30,7 +30,7 @@
   /* Conteúdo de Texto */
   .hero-content {
     text-align: center;
-    color: #fff;
+    color: var(--white);
     max-width: 800px; /* Limita a largura para não ficar muito espalhado */
     margin-top: 60px; /* Compensa a altura do Header fixo */
   }
@@ -56,7 +56,7 @@
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--white);
     background-color: var(--secondary);
     border: none;
     border-radius: 50px;
@@ -65,15 +65,14 @@
   }
   
   .hero-btn:hover {
-    background-color: var(--secondary);
+    background-color: var(--secondary-dark);
     transform: scale(1.05); /* Aumenta um pouquinho ao passar o mouse */
   }
   
 /* --- SEÇÃO 2: FEATURES --- */
 .features-section {
-    /* 1. Aumentei o padding-top de 80px para 120px para afastar do Hero */
     padding: 80px 20px 80px; 
-    background-color: #fff;
+    background-color: var(--bg);
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -88,13 +87,14 @@
   
   .features-header h2 {
     font-size: 2.5rem;
-    color: #1E293B;
+    color: var(--primary);
     margin-bottom: 15px;
   }
   
   .features-header p {
-    color: #64748B;
+    color: var(--text);
     margin-bottom: 60px; /* Mais espaço entre o subtítulo e os cards */
+    opacity: 0.8;
   }
   
   /* Grid dos Cards */
@@ -118,11 +118,12 @@
     border-radius: 50px;
     transition: all 0.3s ease;
     margin-top: 20px;
+    background-color: var(--white);
   }
   
   .btn-outline:hover {
     background-color: var(--secondary);
-    color: #fff;
+    color: var(--white);
   }
 
   /* Responsividade para Celulares */

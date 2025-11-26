@@ -1,9 +1,34 @@
 :root {
-  /* Variáveis de cor*/
-  --primary: #60A5FA; /* Azul */
-  --secondary: #77d7e0; /* Azul claro */
-  --text: #334155; /* Cinza escuro */
-  --bg: #F8FAFC; /* Fundo claro */
+/* --- PALETA 1: SERENIDADE NATURAL --- */
+  
+  /* Cores Principais */
+  --primary: #0F766E;   /* Teal Profundo (Botões, Títulos, Ícones no claro) */
+  --secondary: #D97706; /* Âmbar/Ocre (Destaques, Hover, Detalhes) */
+  --secondary-dark: #c46c07;
+  
+  /* Cores de Fundo e Texto */
+  --bg: #F0FDFA;        /* Menta Suave (Fundo do site - substitui o cinza gelo) */
+  --text: #134E4A;      /* Verde Escuro Profundo (Texto padrão) */
+
+
+  /* Cores de Estrutura */
+  --white: #FFFFFF;     /* Branco Puro (Texto sobre imagem, fundos de card) */
+  --surface-dark: #042F2E; /* Fundo Escuro (Footer, Menu Mobile) */
+  --surface-darker: #022C22; /* Tom ainda mais escuro (Barra de copyright) */
+  --text-on-dark: #94A3B8;   /* Cor para textos secundários sobre fundo escuro */
+
+  /* Cores de Transparência */
+  --dark-transparent: rgba(255, 255, 255, 0.1);
+
+
+
+
+
+  /* Teste de cores
+  --primary: #60A5FA; 
+  --secondary: #77d7e0; 
+  --text: #334155; 
+  --bg: #F8FAFC; */
 }
 
 body {
