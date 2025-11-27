@@ -4,7 +4,7 @@ import Home from "../pages/Home/Home";
 import Sobre from "../pages/Sobre";
 import Viagens from "../pages/Viagens";
 import Cronograma from "../pages/Cronograma";
-import Calculadora from "../pages/Calculadora";
+import Calculadora from "../pages/Calculadora/Calculadora";
 
 export default function Rotas() {
   return (
