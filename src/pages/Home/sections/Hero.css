@@ -1,0 +1,45 @@
+/* Configuração da Seção Hero */
+.hero-section {
+    width: 100%;
+    height: 100vh; /* Ocupa 100% da altura da janela */
+    /* Imagem de fundo de alta qualidade */
+    background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  /* Camada escura (Overlay) */
+  .hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Preto com 40% de transparência */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 0 20px;
+  }
+  
+  /* Conteúdo de Texto */
+  .hero-content {
+    text-align: center;
+    color: var(--white);
+    max-width: 800px; /* Limita a largura para não ficar muito espalhado */
+    margin-top: 60px; /* Compensa a altura do Header fixo */
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para leitura */
+  }
+  
+  .hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);*/
+  }

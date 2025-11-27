@@ -7,6 +7,7 @@ import { FaSuitcase, FaCalendarAlt, FaLock, FaChevronLeft, FaChevronRight, FaUmb
 import { useRef } from "react";
 import CtaCronograma from './sections/CtaCronograma';
 import CtaCambio from './sections/CtaCambio';
+import Hero from './sections/Hero';
 // Dados
 import { destinos } from '../../data/destinos';
 
@@ -39,25 +40,7 @@ function Home() {
   return (
     <div className="home-container">
       
-      {/* SEÇÃO 1: HERO (Imagem de fundo + Texto Principal) */}
-      <section className="hero-section">
-        <div className="hero-overlay"> {/* Camada escura para melhorar leitura */}
-          <div className="hero-content">
-            <h1 className="hero-title">
-              Bem-vindo ao Planejador de Viagens
-            </h1>
-            
-            <p className="hero-text">
-              Organize todas as suas viagens em um só lugar. Planeje datas, atividades,
-              locais e acompanhe seus roteiros com facilidade.
-            </p>
-
-            <Button to="/viagens" variant="primary">
-              Começar
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* SEÇÃO 2: FUNCIONALIDADES */}
       <section className="features-section">
