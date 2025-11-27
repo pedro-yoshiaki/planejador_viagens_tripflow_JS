@@ -1,0 +1,37 @@
+/* --- SEÇÃO 2: FEATURES --- */
+.features-section {
+    padding: 40px 20px 80px; 
+    background-color: var(--bg);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Garante margem em telas menores */
+    text-align: center;
+  }
+  
+  .features-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+  }
+  
+  .features-header p {
+    color: var(--text);
+    margin-bottom: 60px; /* Mais espaço entre o subtítulo e os cards */
+    opacity: 0.8;
+  }
+  
+  /* Grid dos Cards */
+  .features-grid {
+    display: flex;          /* Ativa o modo Flexbox */
+    flex-direction: row;    /* Força a direção horizontal (lado a lado) */
+    flex-wrap: wrap;        /* Permite quebrar linha se a tela for menor */
+    justify-content: center; /* Centraliza o grupo de cards na tela */
+    gap: 30px;              /* Espaço entre os cards */
+    margin-bottom: 60px;
+  }
