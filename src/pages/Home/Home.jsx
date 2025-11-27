@@ -5,8 +5,11 @@ import Button from '../../components/Button/Button';
 import TravelCard from '../../components/TravelCard/TravelCard';
 import { FaSuitcase, FaCalendarAlt, FaLock, FaChevronLeft, FaChevronRight, FaUmbrellaBeach } from 'react-icons/fa';
 import { useRef } from "react";
+import CtaCronograma from './sections/CtaCronograma';
+import CtaCambio from './sections/CtaCambio';
 // Dados
 import { destinos } from '../../data/destinos';
+
 
 function Home() {
   // Referência para o container do carrossel
@@ -131,6 +134,9 @@ function Home() {
           </div>
         </div>
       </section>
+      
+      <CtaCronograma />
+      <CtaCambio />
       
     </div>
   );
