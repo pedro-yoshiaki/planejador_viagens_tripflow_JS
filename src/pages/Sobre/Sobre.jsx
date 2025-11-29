@@ -110,9 +110,9 @@ function Sobre() {
               <strong> Desenvolvimento Web 2</strong>, aplicando práticas modernas de front-end.
             </p>
             <div className="equipe-lista">
-              <div className="membro">Nome do Integrante 1 (Dados)</div>
-              <div className="membro">Nome do Integrante 2 (Rotas)</div>
-              <div className="membro">Você (UI/UX)</div>
+              <div className="membro">Arthur Rodrigues</div>
+              <div className="membro">Matheus Soares</div>
+              <div className="membro">Pedro Yoshiaki</div>
             </div>
           </div>
 
