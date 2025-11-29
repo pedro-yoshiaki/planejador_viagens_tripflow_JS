@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Calculadora.css"; // Vamos criar este arquivo
-import CurrencyConverter from "../../components/CurrencyConverter/CurrencyConverter"
+import CurrencyConverter from "../../components/features/CurrencyConverter/CurrencyConverter"
 
 export default function Calculadora() {
   return (
