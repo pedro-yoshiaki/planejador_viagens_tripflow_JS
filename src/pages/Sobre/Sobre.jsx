@@ -2,27 +2,14 @@ import React from 'react';
 // Importei FaPlaneDeparture (Avião) e FaPalette (Paleta)
 import { FaCheckCircle, FaUsers, FaLaptopCode, FaBullseye, FaPlaneDeparture, FaPalette } from 'react-icons/fa';
 import './Sobre.css';
+import HeroSobre from '../Sobre/sections/HeroSobre'
 
 function Sobre() {
   return (
     <div className="sobre-page">
       
-      {/* SEÇÃO 1: HERO (Imagem de Fundo) */}
-      <section className="sobre-hero">
-        <div className="sobre-overlay"> {/* Camada escura igual da Home */}
-          <div className="container">
-            <h1>
-              Sobre o TripFlow <FaPlaneDeparture className="icon-hero" />
-            </h1>
-            <p className="sobre-lead">
-              O <strong>Planejador de Viagens</strong> é uma aplicação desenvolvida com foco em organização, 
-              praticidade e experiência do usuário. O objetivo é oferecer uma forma simples e 
-              completa de gerenciar viagens pessoais, permitindo cadastrar destinos, cronogramas 
-              e atividades detalhadas sem complicações.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* SEÇÃO 1: HERO */}
+      <HeroSobre/>
 
       {/* SEÇÃO 2: OBJETIVOS */}
       <section className="sobre-objetivos">
