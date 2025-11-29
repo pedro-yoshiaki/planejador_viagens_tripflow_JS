@@ -1,0 +1,81 @@
+/* SEÇÃO 4: INFO (TECNOLOGIAS E EQUIPE) */
+.sobre-info {
+    background-color: var(--bg); /* Alterna cor de fundo */
+    padding: 80px 20px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .info-block h3 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  /* Lista de Tecnologias */
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    background: var(--white); /* Cartão branco */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  
+  .tech-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+  }
+  
+  .tech-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .tech-list li::before {
+    content: "▹";
+    color: var(--secondary);
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Lista da Equipe */
+  .equipe-desc {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: var(--text);
+    opacity: 0.9;
+  }
+  
+  .equipe-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .membro {
+    background-color: var(--white);
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    border-left: 6px solid var(--secondary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+  
+  .membro:hover {
+    transform: translateX(10px); /* Efeito de movimento para a direita */
+  }

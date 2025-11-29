@@ -1,5 +1,5 @@
 import React from 'react';
-import './Objetivos.css';
+import './Cores.css';
 import { FaPalette} from 'react-icons/fa';
 
 function Cores (){
