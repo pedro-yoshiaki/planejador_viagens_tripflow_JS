@@ -1,6 +1,7 @@
 import React from 'react';
 import './Cores.css';
 import { FaPalette} from 'react-icons/fa';
+import ColorCard from '../../../components/features/ColorCard/ColorCard';
 
 function Cores (){
     return(
@@ -12,33 +13,35 @@ function Cores (){
           </p>
           
           <div className="paleta-grid">
+
             {/* Cor Primária */}
-            <div className="cor-card">
-              <div className="cor-swatch" style={{ backgroundColor: 'var(--primary)' }}></div>
-              <strong>Primária</strong>
-              <span>Teal Profundo</span>
-            </div>
+            <ColorCard 
+              cor="var(--primary)" 
+              nome="Primária" 
+              descricao="Teal Profundo" 
+            />
 
             {/* Cor Secundária */}
-            <div className="cor-card">
-              <div className="cor-swatch" style={{ backgroundColor: 'var(--secondary)' }}></div>
-              <strong>Secundária</strong>
-              <span>Âmbar / Ocre</span>
-            </div>
+            <ColorCard 
+              cor="var(--secondary)" 
+              nome="Secundária" 
+              descricao="Âmbar / Ocre" 
+            />
 
             {/* Cor de Texto */}
-            <div className="cor-card">
-              <div className="cor-swatch" style={{ backgroundColor: 'var(--text)' }}></div>
-              <strong>Texto</strong>
-              <span>Verde Escuro</span>
-            </div>
+            <ColorCard 
+              cor="var(--text)" 
+              nome="Texto" 
+              descricao="Verde Escuro" 
+            />
 
             {/* Cor de Fundo */}
-            <div className="cor-card">
-              <div className="cor-swatch" style={{ backgroundColor: 'var(--bg)', border: '1px solid #ccc' }}></div>
-              <strong>Background</strong>
-              <span>Menta Suave</span>
-            </div>
+            <ColorCard 
+              cor="var(--bg)" 
+              nome="Background" 
+              descricao="Menta Suave"
+              borda={true} // Adiciona borda porque a cor é clara
+            />
           </div>
         </div>
       </section>
