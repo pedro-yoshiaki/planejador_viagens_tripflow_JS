@@ -12,6 +12,7 @@ function Viagens() {
     dataInicio: "",
     dataFim: "",
     imagem: "",
+    categoria: ""
   });
 
   const inputImagemRef = useRef(null);
@@ -44,6 +45,7 @@ function Viagens() {
       dataInicio: "",
       dataFim: "",
       imagem: "",
+      categoria: ""
     });
 
     if (inputImagemRef.current) inputImagemRef.current.value = "";
@@ -95,6 +97,7 @@ function Viagens() {
       dataInicio: v.dataInicio,
       dataFim: v.dataFim,
       imagem: v.imagem || "",
+      categoria: v.categoria
     });
 
     setMostrarFormulario(true);
@@ -182,6 +185,31 @@ function Viagens() {
             onChange={(e) => setForm({ ...form, dataFim: e.target.value })}
             style={{ display: "block", marginBottom: "10px" }}
           />
+
+          <label>Categoria:</label>
+          <div>
+            <input
+              type="radio"
+              id="nacional"
+              name="categoria"
+              value="Nacional"
+              checked={form.categoria === "Nacional"}
+              onChange={(e) => setForm({ ...form, categoria: e.target.value })}
+            />
+            <label htmlFor="nacional">
+              Nacional
+            </label>
+
+            <input
+              type="radio"
+              id="internacional"
+              name="categoria"
+              value="Internacional"
+              checked={form.categoria === "Internacional"}
+              onChange={(e) => setForm({ ...form, categoria: e.target.value })}
+            />
+            <label htmlFor="internacional">Internacional</label>
+          </div>
 
           <button
             onClick={salvar}

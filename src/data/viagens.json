@@ -4,13 +4,15 @@
     "destino": "Rio de Janeiro",
     "dataInicio": "2025-12-10",
     "dataFim": "2025-12-15",
-    "atividades": []
+    "atividades": [],
+    "categoria": "Nacional"
   },
   {
     "id": 2,
     "destino": "Buenos Aires",
     "dataInicio": "2026-03-20",
     "dataFim": "2026-03-27",
-    "atividades": []
+    "atividades": [],
+    "categoria": "Internacional"
   }
 ]
