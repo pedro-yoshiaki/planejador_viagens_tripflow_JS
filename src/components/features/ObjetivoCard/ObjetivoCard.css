@@ -1,0 +1,38 @@
+.objetivo-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 4px solid transparent;
+    height: 100%; /* Garante altura igual se usar grid */
+  }
+  
+  .objetivo-card:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--secondary);
+  }
+  
+  /* Container para padronizar o tamanho do ícone */
+  .icon-container {
+    color: var(--secondary); /* Âmbar */
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* Altura fixa para alinhar os cards */
+    width: 60px;
+    background-color: #FFFBEB; /* Fundo suave opcional atrás do ícone */
+    border-radius: 50%;
+  }
+  
+  .objetivo-card p {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.1rem;
+  }

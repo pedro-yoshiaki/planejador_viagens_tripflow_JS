@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useAppContext } from "../../context/AppContext";
-import Button from "../Button/Button";
+import { useAppContext } from "../../../context/AppContext";
+import Button from "../../common/Button/Button"
 import { FaExchangeAlt, FaMoneyBillWave } from "react-icons/fa";
-import "./CurrencyConverter.css"; // CSS específico do componente
+import "./CurrencyConverter.css";
 
 function CurrencyConverter() {
   const { buscarCambio } = useAppContext();
