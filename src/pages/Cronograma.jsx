@@ -1,7 +1,10 @@
+// Importação das bibliotecas
 import React, { useState } from "react";
-import { useAppContext } from "../context/AppContext";
+import { useAppContext } from "../context/AppContext"; //recupera dados e funcionalidade da aplicação que estão no contexto
 
 function Cronograma() {
+
+  // compartilhamento da viagem
   const { viagens } = useAppContext();
 
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
@@ -30,6 +33,7 @@ function Cronograma() {
     });
   }
 
+  // verificação se dados estão preenchido
   function adicionarAtividade() {
     // validações
     if (
@@ -53,17 +57,49 @@ function Cronograma() {
       return;
     }
 
-    // validar que não existe conflito de datas para atividades
-    const conflito = atividades.find((a) => a.data === form.data);
+  //---- Matheus   -----//
 
-    if (conflito) {
-      alert("Você já tem evento marcado neste dia.");
+   const validarHora = (hora) => /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/.test(hora);
+
+   if (!validarHora(form.horario)) {
+     alert("Informe um horário válido (formato HH:mm).");
+     return;
+   }
+
+   const conflito = atividades.find(
+     (a) =>
+       a.data === form.data &&
+       a.horario === form.horario // Agora leva em conta o horário também
+   );
+
+   if (conflito) {
+     alert("Já existe uma atividade marcada neste dia e horário.");
+     return;
+   }
+
+    // validar se a data está dentro do período da viagem
+    const viagem = viagens.find((v) => v.destino === form.local);
+    const dataAtividade = new Date(form.data);
+    const dataInicio = new Date(viagem.dataInicio);
+    const dataFim = new Date(viagem.dataFim);
+
+    if (dataAtividade < dataInicio || dataAtividade > dataFim) {
+      alert("A data da atividade deve estar dentro do período da viagem.");
       return;
     }
+
+    // valida se o valor da atividade é positiva
+   if (isNaN(form.valor) || Number(form.valor) <= 0) {
+     alert("Informe um valor válido e positivo.");
+     return;
+   }
+    //---- Fim    -----//
 
     const novaLista = [...atividades, form].sort(
       (a, b) => new Date(a.data) - new Date(b.data)
     );
+    
+    
     setAtividades(novaLista);
 
     limparFormulario();
@@ -169,12 +205,13 @@ function Cronograma() {
 
           <label>Horário:</label>
           <input
-            type="number"
-            placeholder="Horário (ex: 14 para 14h)"
+            type="text"
+            placeholder="Começo (ex: 14:14)"
             value={form.horario}
             onChange={(e) => setForm({ ...form, horario: e.target.value })}
             style={{ display: "block", marginBottom: "10px", width: "100%" }}
           />
+          
 
           <button
             onClick={adicionarAtividade}

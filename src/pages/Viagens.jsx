@@ -12,6 +12,7 @@ function Viagens() {
     dataInicio: "",
     dataFim: "",
     imagem: "",
+    categoria: ""
   });
 
   const inputImagemRef = useRef(null);
@@ -44,6 +45,7 @@ function Viagens() {
       dataInicio: "",
       dataFim: "",
       imagem: "",
+      categoria: ""
     });
 
     if (inputImagemRef.current) inputImagemRef.current.value = "";
@@ -57,11 +59,23 @@ function Viagens() {
 
     const inicioN = new Date(form.dataInicio);
     const fimN = new Date(form.dataFim);
+    const dataAtual = new Date()
+
 
     if (fimN < inicioN) {
       alert("A data final não pode ser antes da inicial.");
       return;
     }
+
+     if (inicioN < dataAtual) {
+       alert("A data de início da viagem não pode estar no passado.");
+       return;
+     }
+    if (!form.categoria) {  // Certifique-se de que "categoria" é o nome correto no estado.
+      alert("Escolha uma categoria válida!");
+      return;
+    }
+
 
     const conflito = viagens.find((v) => {
       if (editando && v.id === editando) return false;
@@ -80,7 +94,8 @@ function Viagens() {
     if (editando) {
       editarViagem(editando, form);
     } else {
-      adicionarViagem(form);
+      adicionarViagem({...form,
+       id: Math.random().toString(36).substr(2, 9)});
     }
 
     setMostrarFormulario(false);
@@ -95,6 +110,7 @@ function Viagens() {
       dataInicio: v.dataInicio,
       dataFim: v.dataFim,
       imagem: v.imagem || "",
+      categoria: v.categoria
     });
 
     setMostrarFormulario(true);
@@ -182,6 +198,32 @@ function Viagens() {
             onChange={(e) => setForm({ ...form, dataFim: e.target.value })}
             style={{ display: "block", marginBottom: "10px" }}
           />
+
+          <label>Categoria:</label>
+          <div>
+            <input
+              type="radio"
+              id="nacional"
+              name="categoria"
+              value="Nacional"
+              checked={form.categoria === "Nacional"}
+              required={true}
+              onChange={(e) => setForm({ ...form, categoria: e.target.value })}
+            />
+            <label htmlFor="nacional">
+              Nacional
+            </label>
+
+            <input
+              type="radio"
+              id="internacional"
+              name="categoria"
+              value="Internacional"
+              checked={form.categoria === "Internacional"}
+              onChange={(e) => setForm({ ...form, categoria: e.target.value })}
+            />
+            <label htmlFor="internacional">Internacional</label>
+          </div>
 
           <button
             onClick={salvar}
