@@ -3,6 +3,7 @@ import React from 'react';
 import { FaCheckCircle, FaUsers, FaLaptopCode, FaBullseye, FaPlaneDeparture, FaPalette } from 'react-icons/fa';
 import './Sobre.css';
 import HeroSobre from '../Sobre/sections/HeroSobre'
+import Objetivos from '../Sobre/sections/Objetivos'
 
 function Sobre() {
   return (
@@ -12,29 +13,7 @@ function Sobre() {
       <HeroSobre/>
 
       {/* SEÇÃO 2: OBJETIVOS */}
-      <section className="sobre-objetivos">
-        <div className="container">
-          <h2><FaBullseye /> Objetivos do Sistema</h2>
-          <div className="objetivos-grid">
-            <div className="objetivo-card">
-              <FaCheckCircle className="icon-check" />
-              <p>Facilitar o planejamento de viagens</p>
-            </div>
-            <div className="objetivo-card">
-              <FaCheckCircle className="icon-check" />
-              <p>Evitar conflitos de datas automaticamente</p>
-            </div>
-            <div className="objetivo-card">
-              <FaCheckCircle className="icon-check" />
-              <p>Organizar atividades com detalhes completos</p>
-            </div>
-            <div className="objetivo-card">
-              <FaCheckCircle className="icon-check" />
-              <p>Oferecer uma interface clara e fácil de usar</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Objetivos/>
 
       {/* NOVA SEÇÃO: PALETA DE CORES */}
       <section className="sobre-paleta">
