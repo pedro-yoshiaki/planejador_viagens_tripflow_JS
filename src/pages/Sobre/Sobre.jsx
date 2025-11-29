@@ -3,7 +3,7 @@ import './Sobre.css';
 import HeroSobre from '../Sobre/sections/HeroSobre'
 import Objetivos from '../Sobre/sections/Objetivos'
 import Cores from '../Sobre/sections/Cores'
-import EquipeTech from './Sobre/sections/EquipeTech';
+import EquipeTech from '../Sobre/sections/EquipeTech';
 
 function Sobre() {
   return (
