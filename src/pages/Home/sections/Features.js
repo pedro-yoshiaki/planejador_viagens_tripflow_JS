@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../../components/Button/Button';
-import FeatureCard from "../../../components/FeatureCard/FeatureCard";
+import Button from '../../../components/common/Button/Button';
+import FeatureCard from "../../../components/features/FeatureCard/FeatureCard";
 import { FaSuitcase, FaCalendarAlt, FaLock } from 'react-icons/fa';
 import './Features.css';
 

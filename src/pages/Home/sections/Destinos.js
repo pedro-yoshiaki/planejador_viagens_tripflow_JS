@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../../../components/Button/Button';
+import Button from '../../../components/common/Button/Button';
 import './Destinos.css';
 import { destinos } from '../../../data/destinos';
-import TravelCard from '../../../components/TravelCard/TravelCard';
+import TravelCard from '../../../components/features/TravelCard/TravelCard';
 import {FaChevronLeft, FaChevronRight, FaUmbrellaBeach } from 'react-icons/fa';
 import { useRef } from 'react';
 

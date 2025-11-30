@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../../components/Button/Button'; // Ajuste o caminho conforme sua pasta
+import Button from '../../../components/common/Button/Button'; // Ajuste o caminho conforme sua pasta
 import { FaCalendarCheck } from 'react-icons/fa';
 import './CtaSection.css'; // Vamos criar um CSS compartilhado para essas seções CTA
 

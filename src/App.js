@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header/Header'
+import Header from './components/layout/Header/Header'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Footer from './components/Footer/Footer'
+import Footer from './components/layout/Footer/Footer'
 import Rotas from './routes/Rotas';
 
 function App() {
