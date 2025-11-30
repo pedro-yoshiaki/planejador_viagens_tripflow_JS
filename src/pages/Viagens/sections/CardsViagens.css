@@ -1,0 +1,86 @@
+.viagens-content {
+    padding-bottom: 80px;
+  }
+  
+  /* Controles */
+  .viagens-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .filtros {
+    display: flex;
+    gap: 10px;
+    background: var(--white);
+    padding: 5px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .btn-filtro {
+    background: transparent;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #64748B;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-filtro.ativo {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+  
+  /* Grid e Cards */
+  .viagens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .viagem-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .viagem-card:hover { transform: translateY(-5px); }
+  
+  .card-header-img { position: relative; height: 180px; }
+  .card-img { width: 100%; height: 100%; object-fit: cover; }
+  
+  .card-badge {
+    position: absolute; top: 15px; right: 15px;
+    padding: 4px 12px; border-radius: 20px;
+    font-size: 0.75rem; font-weight: 700; color: #fff;
+    text-transform: uppercase;
+  }
+  .card-badge.nacional { background-color: var(--primary); }
+  .card-badge.internacional { background-color: var(--secondary); }
+  
+  .card-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .card-body h3 { margin: 0; color: var(--text); }
+  
+  .card-datas {
+    display: flex; align-items: center; gap: 8px;
+    color: #64748B; font-size: 0.9rem;
+    background: var(--bg); padding: 8px; border-radius: 8px;
+  }
+  
+  .card-actions { display: flex; gap: 10px; margin-top: 10px; }
+  .card-actions .btn { flex: 1; }
+  
+  .link-cronograma {
+    display: block; text-align: center; margin-top: 10px;
+    color: var(--primary); text-decoration: none; font-weight: 600;
+  }
