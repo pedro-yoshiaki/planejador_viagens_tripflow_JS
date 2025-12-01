@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Sobre from "../pages/Sobre/Sobre";
 import Viagens from "../pages/Viagens/Viagens";
-import Cronograma from "../pages/Cronograma";
+import Cronograma from "../pages/Cronograma/Cronograma";
 import Calculadora from "../pages/Calculadora/Calculadora";
 
 export default function Rotas() {

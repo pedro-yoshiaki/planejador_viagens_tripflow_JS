@@ -47,16 +47,46 @@ export function AppProvider({ children }) {
   }
 
 
+  /* --- CRUD ATIVIDADES (NOVO) --- */
+  
+  // Adicionar (agora gera ID único para a atividade)
   function adicionarAtividade(idViagem, atividade) {
+    const novaAtividade = { ...atividade, id: Date.now() }; // Gera ID único
+    
     setViagens(prev =>
       prev.map(v =>
         v.id === idViagem
-          ? {
-              ...v,
-              atividades: [...(v.atividades || []), atividade]
-            }
+          ? { ...v, atividades: [...(v.atividades || []), novaAtividade] }
           : v
       )
+    );
+  }
+
+  // Editar Atividade
+  function editarAtividade(idViagem, atividadeAtualizada) {
+    setViagens(prev =>
+      prev.map(v => {
+        if (v.id !== idViagem) return v;
+        return {
+          ...v,
+          atividades: v.atividades.map(a => 
+            a.id === atividadeAtualizada.id ? atividadeAtualizada : a
+          )
+        };
+      })
+    );
+  }
+
+  // Excluir Atividade
+  function excluirAtividade(idViagem, idAtividade) {
+    setViagens(prev =>
+      prev.map(v => {
+        if (v.id !== idViagem) return v;
+        return {
+          ...v,
+          atividades: v.atividades.filter(a => a.id !== idAtividade)
+        };
+      })
     );
   }
 
@@ -80,6 +110,8 @@ export function AppProvider({ children }) {
         editarViagem,
         excluirViagem,
         adicionarAtividade,
+        editarAtividade,
+        excluirAtividade,
         buscarCambio
       }}
     >

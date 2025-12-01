@@ -1,6 +1,7 @@
 // Importação das bibliotecas
 import React, { useState } from "react";
-import { useAppContext } from "../context/AppContext"; // Recupera dados e funcionalidades globais do contexto da aplicação
+import { useAppContext } from "../../context/AppContext";
+import './Cronograma.css'
 
 // Componente principal
 function Cronograma() {
@@ -116,7 +117,7 @@ function Cronograma() {
      3. INTERFACE DO COMPONENTE
      ======================== */
   return (
-    <div>
+    <div className="cronograma-container">
       <h1>Cronograma da Viagem</h1>
 
       {/* BOTÃO ADICIONAR ATIVIDADE */}
@@ -260,6 +261,7 @@ function Cronograma() {
               padding: "15px",
               borderRadius: "10px",
               marginBottom: "20px",
+              marginTop: "120px"
             }}
           >
             <h3>{v.destino}</h3>
