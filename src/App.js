@@ -7,11 +7,11 @@ import Rotas from './routes/Rotas';
 function App() {
   return (
     <Router>
-    <div className="App">
-      <Header />
-      <Rotas/>
-    </div>
-    <Footer/>
+      <div className="App">
+        <Header />
+        <Rotas/>
+      </div>
+      <Footer/>
     </Router>
   );
 }
