@@ -58,7 +58,7 @@ export const destinos = [
     nome: "Gramado",
     local: "Saindo de Porto Alegre",
     preco: 400,
-    precoIdaVolta: 300, // Perto, passagem barata ou ônibus
+    precoIdaVolta: 300,
     imagem: "/images/gramado.jpg",
     nota: 4.6,
     categoria: "Nacional"
