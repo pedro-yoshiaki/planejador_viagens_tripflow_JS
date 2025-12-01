@@ -1,3 +1,5 @@
+// Componente usado na section "Destinos" de Home, com o objetivo de demonstrar o carregamento dinâmico de imagens
+
 import React from 'react';
 import { FaStar, FaPlane, FaRegCalendarAlt } from 'react-icons/fa';
 import './TravelCard.css';

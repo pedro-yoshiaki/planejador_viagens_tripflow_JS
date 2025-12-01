@@ -27,6 +27,8 @@ export function AppProvider({ children }) {
     }
   }, [viagens]);
 
+  /* --- CRUD VIAGENS --- */
+
   function adicionarViagem(novaViagem) {
     const id = Date.now();
     const viagemComLista = { ...novaViagem, id, atividades: [] };
@@ -47,7 +49,7 @@ export function AppProvider({ children }) {
   }
 
 
-  /* --- CRUD ATIVIDADES (NOVO) --- */
+  /* --- CRUD ATIVIDADES --- */
   
   // Adicionar (agora gera ID único para a atividade)
   function adicionarAtividade(idViagem, atividade) {
@@ -90,6 +92,7 @@ export function AppProvider({ children }) {
     );
   }
 
+  // Uso de API para o conversor de moedas
   async function buscarCambio(codigo = "USD-BRL,EUR-BRL") {
     try {
       const url = `https://economia.awesomeapi.com.br/json/last/${codigo}`;

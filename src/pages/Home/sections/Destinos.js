@@ -26,9 +26,9 @@ function Destino (){
         }
     };
 
-    // Função provisória de agendamento (Integrante 1 vai conectar isso ao App.js depois)
+    // Função provisória de agendamento
     const handleAgendar = (destino) => {
-        alert(`Você clicou em agendar para: ${destino.nome}.\n(Em breve: Adiciona ao Cronograma)`);
+        alert(`Você clicou em agendar para: ${destino.nome}.\n(Em breve: Conexão com sites de viagem)`);
     };
     return (
             <section className="carousel-section">

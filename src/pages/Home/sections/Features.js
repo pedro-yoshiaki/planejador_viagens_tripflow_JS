@@ -14,7 +14,7 @@ function Feature() {
             </div>
 
             <div className="features-grid">
-                {/* Agora usamos o componente 3 vezes, passando dados diferentes */}
+                {/* Uso do componente FeatureCard */}
                 
                 <FeatureCard 
                 icon={<FaSuitcase />}

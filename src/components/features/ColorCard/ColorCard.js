@@ -1,3 +1,5 @@
+// Componente usado em 'Sobre' que apresenta a paleta de Cores
+
 import React from 'react';
 import './ColorCard.css';
 

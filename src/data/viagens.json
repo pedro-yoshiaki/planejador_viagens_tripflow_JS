@@ -4,15 +4,77 @@
     "destino": "Rio de Janeiro",
     "dataInicio": "2025-12-10",
     "dataFim": "2025-12-15",
-    "atividades": [],
+    "atividades": [
+      {
+        "id": 101,
+        "atividade": "Visita ao Cristo Redentor",
+        "descricao": "Subida de trem pelo Corcovado e fotos panorâmicas da cidade.",
+        "valor": "120",
+        "local": "Rio de Janeiro",
+        "endereco": "Parque Nacional da Tijuca - Alto da Boa Vista",
+        "data": "2025-12-11",
+        "horario": "09:00"
+      },
+      {
+        "id": 102,
+        "atividade": "Almoço na Confeitaria Colombo",
+        "descricao": "Almoço tradicional no centro histórico.",
+        "valor": "150",
+        "local": "Rio de Janeiro",
+        "endereco": "R. Gonçalves Dias, 32 - Centro",
+        "data": "2025-12-11",
+        "horario": "13:30"
+      },
+      {
+        "id": 103,
+        "atividade": "Pôr do Sol no Arpoador",
+        "descricao": "Assistir ao pôr do sol nas pedras.",
+        "valor": "0",
+        "local": "Rio de Janeiro",
+        "endereco": "Praia do Arpoador - Ipanema",
+        "data": "2025-12-12",
+        "horario": "17:30"
+      }
+    ],
     "categoria": "Nacional"
   },
+
   {
     "id": 2,
     "destino": "Buenos Aires",
     "dataInicio": "2026-03-20",
     "dataFim": "2026-03-27",
-    "atividades": [],
+    "atividades": [{
+        "id": 201,
+        "atividade": "Passeio no Caminito",
+        "descricao": "Caminhada pelas ruas coloridas e compra de souvenirs.",
+        "valor": "50",
+        "local": "Buenos Aires",
+        "endereco": "Caminito, La Boca",
+        "data": "2026-03-21",
+        "horario": "10:00"
+      },
+      {
+        "id": 202,
+        "atividade": "Jantar com Show de Tango",
+        "descricao": "Espetáculo clássico no Señor Tango com jantar incluso.",
+        "valor": "450",
+        "local": "Buenos Aires",
+        "endereco": "Vieytes 1655, Barracas",
+        "data": "2026-03-22",
+        "horario": "20:00"
+      },
+      {
+        "id": 203,
+        "atividade": "Visita à Casa Rosada",
+        "descricao": "Tour guiado pelo palácio presidencial.",
+        "valor": "0",
+        "local": "Buenos Aires",
+        "endereco": "Balcarce 50, Monserrat",
+        "data": "2026-03-23",
+        "horario": "14:00"
+      }
+    ],
     "categoria": "Internacional"
   }
 ]

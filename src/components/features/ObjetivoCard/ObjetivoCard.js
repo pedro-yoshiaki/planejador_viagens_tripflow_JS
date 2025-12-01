@@ -1,3 +1,5 @@
+// Componente usado em "Sobre" para mostrar os objetivos do SPA
+
 import React from 'react';
 import './ObjetivoCard.css';
 

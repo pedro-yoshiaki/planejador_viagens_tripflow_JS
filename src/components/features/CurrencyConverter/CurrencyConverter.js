@@ -1,3 +1,5 @@
+// Componente usado em "Câmbio" para converter moedas (Euro, Dólar, Libra) para Real
+
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../../../context/AppContext";
 import Button from "../../common/Button/Button"

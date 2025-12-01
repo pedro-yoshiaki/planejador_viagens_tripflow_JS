@@ -1,6 +1,6 @@
 /* Estilos Base */
 .btn {
-    display: inline-flex; /* Melhor que inline-block para alinhar ícones e texto */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -11,7 +11,7 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     border: 2px solid transparent;
-    font-family: 'Poppins', sans-serif; /* Garante a fonte */
+    font-family: 'Poppins', sans-serif;
   }
   
   .btn:active {
