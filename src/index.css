@@ -41,6 +41,10 @@ body {
   padding: 20px;
 }
 
+.App {
+  text-align: center;
+}
+
 /* Reseta todos os elementos para contar o padding dentro da largura */
 *, *::before, *::after {
   box-sizing: border-box;
