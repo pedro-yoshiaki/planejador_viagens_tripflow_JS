@@ -95,3 +95,48 @@
     text-align: center;
     margin-top: 20px;
   }
+
+  /* =========================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================= */
+
+/* Tablet e Notebooks Pequenos (até 1024px) */
+@media screen and (max-width: 1024px) {
+  .carousel-item {
+    /* Mostra 2.5 cards ou 3 cards dependendo do gosto. 
+       Aqui configurei para 2 cards por vez para melhor leitura */
+    width: calc(50% - 12px); /* (100% / 2) - metade do gap */
+  }
+}
+
+/* Mobile (até 768px) */
+@media screen and (max-width: 768px) {
+  /* Ajuste do Cabeçalho para Mobile */
+  .section-header {
+    flex-direction: column; /* Empilha Título e Botões */
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem; /* Diminui um pouco a fonte do título */
+  }
+
+  /* Move os botões para a direita ou deixa full width */
+  .carousel-actions {
+    align-self: flex-end; /* Joga os botões para a direita */
+    margin-top: -10px;
+  }
+
+  /* Ajuste dos Cards no Mobile */
+  .carousel-item {
+    /* No mobile, o ideal é mostrar 1 card inteiro + um pedacinho do próximo (85%) 
+       para indicar que existe rolagem horizontal */
+    width: 85%; 
+  }
+
+  .carousel-container {
+    gap: 16px; /* Gap um pouco menor no mobile */
+    padding-right: 20px; /* Garante espaço no final do último card */
+  }
+}
