@@ -192,15 +192,6 @@
     margin-top: 20px;
   }
   
-  /* Buttons */
-  .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    color: white;
-  }
-  .btn-primary { background-color: #D97706; }
+  
   .btn-secondary { background-color: #94A3B8; }
   .btn-success { background-color: #0F766E; }
