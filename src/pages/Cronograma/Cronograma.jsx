@@ -10,7 +10,6 @@ function Cronograma() {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [atividadeEditando, setAtividadeEditando] = useState(null);
   
-  // NOVO: Estado para controlar a ordem ('asc' = Crescente, 'desc' = Decrescente)
   const [ordem, setOrdem] = useState("asc");
   
   const initialFormState = {
@@ -60,7 +59,7 @@ function Cronograma() {
     }
   }
 
-  // NOVO: Função para alternar a ordem ao clicar no botão
+  // Função para alternar a ordem ao clicar no botão
   function toggleOrdem() {
     setOrdem(prev => prev === "asc" ? "desc" : "asc");
   }
