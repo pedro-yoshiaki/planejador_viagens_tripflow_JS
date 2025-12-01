@@ -1,11 +1,4 @@
 /* --- CONTAINER PRINCIPAL --- */
-.viagens-container {
-    padding: 120px 20px 60px; /* Espaço para o header fixo */
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 80vh;
-  }
-  
   .empty-state {
     text-align: center;
     color: #64748B;
