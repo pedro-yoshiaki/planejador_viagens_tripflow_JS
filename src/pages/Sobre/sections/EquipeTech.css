@@ -79,3 +79,28 @@
   .membro:hover {
     transform: translateX(10px); /* Efeito de movimento para a direita */
   }
+
+  /* =========================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================= */
+@media screen and (max-width: 768px) {
+  
+  .sobre-info {
+    padding: 40px 20px; /* Reduz o espaçamento vertical excessivo */
+  }
+
+  .info-grid {
+    /* O PULO DO GATO: Muda de 2 colunas para 1 coluna */
+    grid-template-columns: 1fr; 
+    gap: 40px; /* Reduz o buraco entre Tecnologias e Equipe */
+  }
+
+  /* Ajustes finos de estética para mobile */
+  .info-block h3 {
+    font-size: 1.5rem; /* Título um pouco menor */
+  }
+
+  .tech-list {
+    padding: 20px; /* Menos preenchimento interno no card branco */
+  }
+}
